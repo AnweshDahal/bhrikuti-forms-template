@@ -23,42 +23,275 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <style></style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      p {
+        margin: 0px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+      }
+
+      .page {
+        max-width: 789px;
+        margin-inline: auto;
+        font-family: "Inter", sans-serif;
+        font-kerning: none;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        letter-spacing: 0px;
+        font-smooth: never;
+        text-align: justify;
+        padding: 1rem;
+      }
+
+      .page__header {
+        position: relative;
+      }
+
+      .photo-section {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .photo-section .photo-box {
+        height: 2.6cm;
+        width: 2.4cm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        border: 1px solid black;
+      }
+
+      .label--title {
+        text-decoration: underline;
+      }
+
+      .pg {
+        display: grid;
+        align-content: center;
+        border: 1px solid black;
+        margin-bottom: -1px;
+      }
+
+      .pr {
+        display: grid;
+      }
+
+      .pc {
+        display: grid;
+        align-items: center;
+        padding-inline: 5px;
+        padding-block: 3px;
+      }
+
+      .applicant-date .pr {
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .boid .pr {
+        grid-template-columns: 3fr 7fr;
+      }
+
+      .pc-cell {
+        display: grid;
+        padding: 0px !important;
+      }
+
+      .boid .pc-cell {
+        grid-template-columns: repeat(16, 1fr);
+      }
+
+      .cell {
+        border-right: 1px solid black;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .boid .cell:last-child {
+        border: none;
+      }
+
+      .nb {
+        border: none !important;
+      }
+
+      .bhrikuti-detail .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .account-type .pr {
+        grid-template-columns: 2fr 2fr 3fr 2fr;
+      }
+
+      .account-type .pc {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+      }
+
+      .account-type .pc.label {
+        display: block !important;
+      }
+
+      .cb {
+        border: 1px solid black;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        padding: 2px;
+      }
+
+      .fullname-np .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+      .fullname-en .pr {
+        grid-template-columns: 2.5fr 7.5fr;
+      }
+
+      .fullname-en .pc-cell {
+        grid-template-columns: repeat(20, 1fr);
+      }
+
+      .fullname-en .cell:last-child {
+        border: none;
+      }
+
+      .dob .pr {
+        grid-template-columns: 2fr 4fr 4fr;
+      }
+
+      .ig {
+        display: grid;
+
+        align-items: center;
+      }
+
+      .dob .ig {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gender .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .gender .ig {
+        grid-template-columns: 1fr 2fr;
+      }
+
+      .nationality .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .nationality .ig {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cbc {
+        display: flex;
+        align-items: center;
+      }
+
+      .cbc .cb {
+        margin-left: 1rem;
+      }
+
+      .citizenship .pr {
+        grid-template-columns: 2fr 3fr 2fr 2fr 2fr 2fr;
+      }
+
+      .passport .pr {
+        grid-template-columns: repeat(8, 1fr);
+      }
+
+      .idcard .pr {
+        grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 1fr 1fr;
+      }
+
+      .spacer {
+        display: block;
+        height: 0.7rem;
+      }
+
+      .correspondance .pr {
+        grid-template-columns: 2.5fr 7.5fr;
+      }
+
+      .zone-district-mun .pr {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .tole-ward-block .pr {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .country .pr {
+        grid-template-columns: 2.5fr 7.5fr;
+      }
+
+      .tele-handy .pr {
+        grid-template-columns: repeat(2, 1fr 2fr);
+      }
+
+      .fax-email .pr {
+        grid-template-columns: repeat(2, 1fr 2fr);
+      }
+
+      @media print {
+        .page {
+          page-break-inside: avoid;
+          page-break-after: always;
+        }
+      }
+
+      .be {
+        border-right: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <div class="page">
       <div class="page__header">
         <div class="photo-section">
-          <p class="label">फा. नं.: १</p>
-          <p class="label">Form No.: 1</p>
-          <div class="photo-box">
-            <p class="label">हालसालै खिचिएको फोटो</p>
+          <p class="label text-center">फा. नं.: १</p>
+          <p class="label text-center">Form No.: 1</p>
+          <div class="photo-box ba">
+            <p class="label text-center">हालसालै खिचिएको फोटो</p>
           </div>
         </div>
         <p class="label text-center">अनुसूची - १२</p>
         <p class="label text-center">(विनियम २० सँग सम्बन्धित)</p>
-        <p class="label label--title mt-5">
+        <p class="label label--title text-center mt-4">
           प्राकृतिक व्यक्तिको हितग्राही खाता खोल्ने निवेदन ढाँचा
         </p>
-        <p class="label label--title">
+        <p class="label label--title text-center mt-2 mb-5">
           Format of Account Opening Form for Individual Beneficial Owner
         </p>
       </div>
       <div class="pg official-title">
         <div class="pr">
-          <div class="pc bx bt">
-            <p class="label">कार्यालय प्रयोजन को लागि मात्र</p>
-            <p class="label">For Official Use Only</p>
+          <div class="pc">
+            <p class="label text-center">कार्यालय प्रयोजन को लागि मात्र</p>
+            <p class="label text-center">For Official Use Only</p>
           </div>
         </div>
       </div>
       <div class="applicant-date pg">
         <div class="pr">
-          <div class="pc bx bt">
+          <div class="pc be">
             <p class="label">आवेदन नम्बर:</p>
             <p class="label">Application No:</p>
           </div>
-          <div class="pc be bt">
+          <div class="pc">
             <p class="label">मिति:</p>
             <p class="label">Date:</p>
           </div>
@@ -66,7 +299,7 @@
       </div>
       <div class="symbol-section pg">
         <div class="pr">
-          <div class="pc bx bb">
+          <div class="pc">
             <p class="label">संकेत नम्बर:</p>
             <p class="label">Symbol No.:</p>
           </div>
@@ -74,63 +307,63 @@
       </div>
       <div class="boid pg">
         <div class="pr">
-          <div class="pc ba lbl">
+          <div class="pc be">
             <p class="label">हितग्राही खाता नम्बर:</p>
             <p class="label">Beneficial Owner Account No.:</p>
           </div>
-          <div class="pc by be pc-cell">
-            <div class="cell be">
+          <div class="pc by pc-cell">
+            <div class="cell">
               <p class="label">१</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">३</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">०</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">१</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">५</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">०</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">०</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label">०</p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="pg nb">
+      <div class="pg nb mt-2">
         <div class="pr">
           <div class="pc">
             <p class="label">
@@ -140,17 +373,17 @@
           </div>
         </div>
       </div>
-      <div class="pb nb">
+      <div class="pg nb">
         <div class="pr">
           <div class="pc">
-            <p class="label mb-5">
+            <p class="label mb-2">
               Please complete all details and strike out the non-applicable
               fields/boxes.
             </p>
           </div>
         </div>
       </div>
-      <div class="bhrikuti-detail pg">
+      <div class="bhrikuti-detail pg nb mt-1">
         <div class="pr">
           <div class="pc lbl">
             <p class="label">निक्षेप सदस्यको नाम:</p>
@@ -162,9 +395,9 @@
           </div>
         </div>
       </div>
-      <div class="account-type pg nb">
+      <div class="account-type pg nb my-2">
         <div class="pr">
-          <div class="pc">
+          <div class="pc label">
             <p class="label">खाताको किसिम:</p>
             <p class="label">Types of Account:</p>
           </div>
@@ -173,7 +406,7 @@
               <p class="label">व्यक्तिगत</p>
               <p class="label">Individual</p>
             </div>
-            <div class="cb"></div>
+            <div class="cb">✓</div>
           </div>
           <div class="pc">
             <div>
@@ -191,79 +424,79 @@
           </div>
         </div>
       </div>
-      <p class="label"><strong>हित्ग्राही को विवरण</strong></p>
+      <p class="label mb-1"><strong>हित्ग्राही को विवरण</strong></p>
       <div class="fullname-np pg">
         <div class="pr">
-          <div class="pc bs bt lbl">
+          <div class="pc lbl">
             <p class="label">हित्ग्राही को नाम:</p>
           </div>
-          <div class="pc bt be val">{{nameNP}}</div>
+          <div class="pc val"><p class="label">{{nameNP}}</p></div>
         </div>
       </div>
       <div class="fullname-en pg">
         <div class="pr">
-          <div class="pc px pt lbl">
+          <div class="pc lbl be">
             <p class="label">Name of Beneficial Owner:</p>
           </div>
-          <div class="pc by be pc-cell">
-            <div class="cell be">
+          <div class="pc pc-cell">
+            <div class="cell">
+              <p class="label">A</p>
+            </div>
+            <div class="cell">
+              <p class="label">N</p>
+            </div>
+            <div class="cell">
+              <p class="label">W</p>
+            </div>
+            <div class="cell">
+              <p class="label">E</p>
+            </div>
+            <div class="cell">
+              <p class="label">E</p>
+            </div>
+            <div class="cell">
+              <p class="label">S</p>
+            </div>
+            <div class="cell">
+              <p class="label">H</p>
+            </div>
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
+              <p class="label">D</p>
+            </div>
+            <div class="cell">
+              <p class="label">A</p>
+            </div>
+            <div class="cell">
+              <p class="label">H</p>
+            </div>
+            <div class="cell">
+              <p class="label">A</p>
+            </div>
+            <div class="cell">
+              <p class="label">L</p>
+            </div>
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
-              <p class="label"></p>
-            </div>
-            <div class="cell be">
+            <div class="cell">
               <p class="label"></p>
             </div>
           </div>
@@ -271,18 +504,18 @@
       </div>
       <div class="dob pg">
         <div class="pr">
-          <div class="pc pt px">
+          <div class="pc be">
             <p class="label">जन्म मिति</p>
             <p class="label">Date of Birth</p>
           </div>
-          <div class="pc pt pe">
+          <div class="pc be ig">
             <div>
               <p class="label">बि.सं.</p>
               <p class="label">B.S.</p>
             </div>
             <p class="label">{{dobNP}}</p>
           </div>
-          <div class="pc pt pe">
+          <div class="pc ig">
             <div>
               <p class="label">ई.सं.</p>
               <p class="label">A.D.</p>
@@ -293,17 +526,17 @@
       </div>
       <div class="gender pg">
         <div class="pr">
-          <div class="pc bt bx">
+          <div class="pc be">
             <p class="label">लिङ्ग</p>
             <p class="label">Gender</p>
           </div>
-          <div class="pc bt be">
+          <div class="pc ig">
             <div class="cbc me-5">
               <div>
                 <p class="label">पुरुष</p>
                 <p class="label">Male</p>
               </div>
-              <div class="div cb"></div>
+              <div class="div cb">✓</div>
             </div>
 
             <div class="cbc">
@@ -318,17 +551,17 @@
       </div>
       <div class="nationality pg">
         <div class="pr">
-          <div class="pc bt bx">
+          <div class="pc be">
             <p class="label">राष्ट्रियता</p>
             <p class="label">Nationality</p>
           </div>
-          <pc class="bt be">
+          <div class="pc ig">
             <div class="cbc me-5">
               <div>
                 <p class="label">नेपाली</p>
                 <p class="label">Nepali</p>
               </div>
-              <div class="div cb"></div>
+              <div class="div cb">✓</div>
             </div>
             <div class="cbc me-5">
               <div>
@@ -337,18 +570,191 @@
               </div>
               <div class="div cb"></div>
             </div>
-          </pc>
+          </div>
         </div>
       </div>
       <div class="citizenship pg">
         <div class="pr">
-          <div class="pc bt bx">
+          <div class="pc be">
             <p class="label">नागरिकता नम्बर</p>
             <p class="label">Citizenship No.</p>
           </div>
+          <div class="pc be">
+            <p class="label">{{citizenshipNo}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जारी जिल्ला</p>
+            <p class="label">Issue District</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{citizensipDistrict}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जारी मिति</p>
+            <p class="label">Issue Date</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{citizenshipDate}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="passport pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">राहदानी नम्बर</p>
+            <p class="label">Passport No.</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{passportNo}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जारी ठाउँ</p>
+            <p class="label">Place of Issue</p>
+          </div>
+          <div class="pc be">
+            <p class="lab">{{passportPlace}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जारी मिति</p>
+            <p class="label">Issue Date</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{passportDate}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">म्याद सकिने मिति</p>
+            <p class="label">Expiry Date</p>
+          </div>
+          <div class="pc"><p class="label">{{passportExpiry}}</p></div>
+        </div>
+      </div>
+      <div class="idcard pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">परिचयपत्रको किसिम</p>
+            <p class="label">Types of Identity Card</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{idType}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">परिचयपत्र नं.</p>
+            <p class="label">Identification No.</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{idNo}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जारी गर्ने निकाय</p>
+            <p class="label">Issuance Authority</p>
+          </div>
+          <div class="pc be"><p class="label">{{idAuthority}}</p></div>
+          <div class="pc">
+            <p class="label">जारी मिति</p>
+            <p class="label">Issue Date</p>
+          </div>
+          <div class="pc"><p class="label">{{idDate}}</p></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="correspondance pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">पत्राचार गर्ने ठेगाना:</p>
+            <p class="label">Correspondence Addrerss:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{correspondanceAddress}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="country pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">राष्ट्र:</p>
+            <p class="label">Country:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{country}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="zone-district-mun pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">अंचल:</p>
+            <p class="label">Zone:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{zone}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जिल्ला:</p>
+            <p class="label">District:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{district}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">गा. बि. स. / न. पा. / मा.न.पा.</p>
+            <p class="label">VDC/Municipality/Metropolitan</p>
+          </div>
+          <div class="pc"><p class="label">{{municipality}}</p></div>
+        </div>
+      </div>
+      <div class="tole-ward-block pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">टोल:</p>
+            <p class="label">Tole:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{tole}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">वडा नं.:</p>
+            <p class="label">Ward No.:</p>
+          </div>
+          <div class="pc be"><p class="label">{{wardNo}}</p></div>
+          <div class="pc be">
+            <p class="label">ब्लक नं:</p>
+            <p class="label">Block No.:</p>
+          </div>
+          <div class="pc"><p class="label">{{blockNo}}</p></div>
+        </div>
+      </div>
+      <div class="tele-handy pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">टेलिफोन नं.:</p>
+            <p class="label">Telephone No.:</p>
+          </div>
+          <div class="pc be"><p class="label">{{telephoneNo}}</p></div>
+          <div class="pc be">
+            <p class="label">मोबाइल नं.:</p>
+            <p class="label">Mobile No.:</p>
+          </div>
+          <div class="pc"><p class="label">{{mobileNo}}</p></div>
+        </div>
+      </div>
+      <div class="fax-email pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">फ्याक्स नं.:</p>
+            <p class="label">Fax No.:</p>
+          </div>
+          <div class="pc be"><p class="label">{{faxNo}}</p></div>
+          <div class="pc be">
+            <p class="label">ईमेल नं.:</p>
+            <p class="label">E-mail ID:</p>
+          </div>
+          <div class="pc"><p class="label">{{emailID}}</p></div>
         </div>
       </div>
     </div>
+    <div class="page">Page 2</div>
+    <div class="page">Page 3</div>
+    <div class="page">Page 4</div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
