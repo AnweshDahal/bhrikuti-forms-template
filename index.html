@@ -244,88 +244,246 @@
         grid-template-columns: repeat(2, 1fr 2fr);
       }
 
-      .permanent-address .pr{
+      .permanent-address .pr {
         grid-template-columns: 2fr 8fr;
       }
 
-      .nearest-landmark .pr{
+      .nearest-landmark .pr {
         grid-template-columns: 2fr 8fr;
       }
 
-      .family-name-en .pr, .family-name-np .pr{
+      .family-name-en .pr,
+      .family-name-np .pr {
         grid-template-columns: 2.5fr 7.5fr;
       }
 
-      .family-name-en .pc-cell{
+      .family-name-en .pc-cell {
         display: grid;
         grid-template-columns: repeat(20, 1fr);
       }
 
-      .family-name-en .cell:last-child{
+      .family-name-en .cell:last-child {
         border: none;
       }
 
-      .occupation .pr{
+      .occupation .pr {
         grid-template-columns: 1fr 9fr;
       }
 
-      .occupation .pc:first-child{
+      .occupation .pc:first-child {
         align-content: center;
       }
-      .ig{
+      .ig {
         display: grid;
       }
 
-      .occupation .ig--1{
+      .occupation .ig--1 {
         grid-template-columns: repeat(6, 1fr);
       }
 
-      .occupation .ig--2{
+      .occupation .ig--2 {
         grid-template-columns: 3fr 3fr 1fr 2fr;
       }
 
-      .business-type .pr{
+      .business-type .pr {
         grid-template-columns: 2fr 8fr;
       }
 
-      .business-type .ig{
+      .business-type .ig {
         grid-template-columns: 1fr 1fr;
       }
 
-      .org-name-address-des .pr{
+      .org-name-address-des .pr {
         grid-template-columns: 3fr 3fr 1fr 3fr 1fr 2fr;
       }
 
-      .financial-details .pr{
+      .financial-details .pr {
         grid-template-columns: 2fr 8fr;
       }
 
-      .financial-details .ig{
+      .financial-details .ig {
         margin-bottom: 5px;
       }
 
-      .financial-details .ig--1{
+      .financial-details .ig--1 {
         grid-template-columns: 1fr;
       }
 
-      .financial-details .ig--2, .financial-details .ig--3{
+      .financial-details .ig--2,
+      .financial-details .ig--3 {
         grid-template-columns: 1fr 1fr;
       }
 
-      .standing-instruction .pr{
+      .standing-instruction .pr {
         grid-template-columns: 6fr 4fr;
       }
 
-      .standing-instruction .ig{
+      .standing-instruction .ig {
         grid-template-columns: 1fr 1fr;
       }
 
-      .statement-frequency .pr{
+      .statement-frequency .pr {
         grid-template-columns: 2fr 8fr;
       }
 
-      .statement-frequency .ig{
+      .statement-frequency .ig {
         grid-template-columns: repeat(4, 1fr);
+      }
+
+      .guardian-name .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .guardian-relation .pr {
+        grid-template-columns: 3fr 8fr;
+      }
+
+      .guardian-address .pr {
+        grid-template-columns: 3fr 8fr;
+      }
+
+      .gCountry-zone .pr {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gDistrict-tele .pr {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gFax-mobile .pr {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gPan-email .pr {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gDis .pr {
+        grid-template-columns: 1fr 9fr;
+      }
+
+      .gDis .pc:first-child {
+        align-content: start;
+        justify-content: left;
+      }
+
+      .nrn-address .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .nrn-city-state .pr {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .nrn-country-code .pr {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .bank-type .pr {
+        grid-template-columns: 2.5fr 7.5fr;
+      }
+
+      .bank-type .ig {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .bank-account-no .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .bank-name-address .pr {
+        grid-template-columns: 3.5fr 6.5fr;
+      }
+
+      .nominee-name .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .nominee-relationship .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .nominee-id-issue-age .pr {
+        grid-template-columns: 3fr 2fr 2fr 2fr 1fr 1fr;
+      }
+
+      .nominee-address .pr {
+        grid-template-columns: 2.5fr 7.5fr;
+      }
+
+      .mapC {
+        border: 1px solid black;
+        height: 7cm;
+        position: relative;
+      }
+
+      .mapC.pg {
+        align-content: stretch;
+      }
+
+      .mapC .pr {
+        grid-template-columns: 2fr 8fr;
+      }
+
+      .mapC .pc:first-child {
+        align-content: center;
+      }
+
+      .mapC .pc:last-child {
+        position: relative;
+      }
+
+      .map__pointer {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .map__pointer {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .map__p {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .map_p {
+        position: absolute;
+        bottom: 0;
+        left: 1cm;
+        text-align: center;
+      }
+
+      .biometrics .pr {
+        grid-template-columns: 2fr 3fr;
+        column-gap: 2rem;
+      }
+
+      .finger-print {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        height: 4cm;
+        border: 1px solid black;
+      }
+
+      .biometrics .ig--1 {
+        align-items: start;
+        grid-template-rows: 1fr 1fr 7fr;
+      }
+
+      .ig--2 {
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        column-gap: 1rem;
+      }
+
+      .sig {
+        border: 1px solid black;
+        height: 4cm;
       }
 
       @media print {
@@ -843,17 +1001,11 @@
       <div class="permanent-address pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              स्थायी ठेगाना:
-            </p>
-            <p class="label">
-              Permanent Address:
-            </p>
+            <p class="label">स्थायी ठेगाना:</p>
+            <p class="label">Permanent Address:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{permanentAddress}}
-            </p>
+            <p class="label">{{permanentAddress}}</p>
           </div>
         </div>
       </div>
@@ -937,17 +1089,11 @@
       <div class="nearest-landmark pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              नजिकको ल्याण्डमार्क:
-            </p>
-            <p class="label">
-              Nearest Landmark
-            </p>
+            <p class="label">नजिकको ल्याण्डमार्क:</p>
+            <p class="label">Nearest Landmark</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{nearestLandmark}}
-            </p>
+            <p class="label">{{nearestLandmark}}</p>
           </div>
         </div>
       </div>
@@ -964,9 +1110,7 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              हजुर बुबाको नाम:
-            </p>
+            <p class="label">हजुर बुबाको नाम:</p>
           </div>
           <div class="pc">
             <p class="label">{{grandfatherNameNP}}</p>
@@ -977,9 +1121,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Grandfather's Name:
-            </p>
+            <p class="label">Grandfather's Name:</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -992,14 +1134,10 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              बुबाको नाम:
-            </p>
+            <p class="label">बुबाको नाम:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{fatherNameNP}}
-            </p>
+            <p class="label">{{fatherNameNP}}</p>
           </div>
         </div>
       </div>
@@ -1007,9 +1145,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Father's Name
-            </p>
+            <p class="label">Father's Name</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -1022,14 +1158,10 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              आमाको नाम:
-            </p>
+            <p class="label">आमाको नाम:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{motherNameNP}}
-            </p>
+            <p class="label">{{motherNameNP}}</p>
           </div>
         </div>
       </div>
@@ -1037,9 +1169,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Mother's Name
-            </p>
+            <p class="label">Mother's Name</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -1052,14 +1182,10 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              पति/ पत्नीको नाम:
-            </p>
+            <p class="label">पति/ पत्नीको नाम:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{spouseNameNP}}
-            </p>
+            <p class="label">{{spouseNameNP}}</p>
           </div>
         </div>
       </div>
@@ -1067,9 +1193,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Spouse's Name
-            </p>
+            <p class="label">Spouse's Name</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -1082,14 +1206,10 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              छोराको नाम:
-            </p>
+            <p class="label">छोराको नाम:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{sonNameNP}}
-            </p>
+            <p class="label">{{sonNameNP}}</p>
           </div>
         </div>
       </div>
@@ -1097,9 +1217,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Son's Name
-            </p>
+            <p class="label">Son's Name</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -1112,14 +1230,10 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              छोरीको नाम:
-            </p>
+            <p class="label">छोरीको नाम:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{daughterNameNP}}
-            </p>
+            <p class="label">{{daughterNameNP}}</p>
           </div>
         </div>
       </div>
@@ -1127,9 +1241,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Daughter's Name
-            </p>
+            <p class="label">Daughter's Name</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -1142,14 +1254,10 @@
       <div class="family-name-np pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              बुहारीको नाम:
-            </p>
+            <p class="label">बुहारीको नाम:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{daughterInLawNameNP}}
-            </p>
+            <p class="label">{{daughterInLawNameNP}}</p>
           </div>
         </div>
       </div>
@@ -1157,9 +1265,7 @@
       <div class="family-name-en pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">
-              Daughter in Law's Name
-            </p>
+            <p class="label">Daughter in Law's Name</p>
           </div>
           <div class="pc pc-cell">
             <div class="cell">
@@ -1195,7 +1301,7 @@
                 </div>
                 <div class="div cb">✓</div>
               </div>
-              
+
               <div class="cbc me-1">
                 <div>
                   <p class="label">सरकारी</p>
@@ -1203,7 +1309,7 @@
                 </div>
                 <div class="div cb"></div>
               </div>
-              
+
               <div class="cbc me-1">
                 <div>
                   <p class="label">विशेषज्ञ</p>
@@ -1236,7 +1342,7 @@
             <div class="ig ig--2">
               <div class="cbc me-1">
                 <div>
-                  <p class="label">सामाजिक/ निजि क्षेत्र </p>
+                  <p class="label">सामाजिक/ निजि क्षेत्र</p>
                   <p class="label">Public/ Private Sector</p>
                 </div>
                 <div class="div cb"></div>
@@ -1255,8 +1361,7 @@
                 </div>
                 <div class="div cb"></div>
               </div>
-              
-              
+
               <div class="cbc me-1">
                 <div>
                   <p class="label">गृहिणी</p>
@@ -1337,7 +1442,9 @@
           </div>
           <div class="pc">
             <div class="ig ig--1">
-              <p class="label">आयको सिमा (आर्थिक विवरण) / Income Limit (Annual Details)</p>
+              <p class="label">
+                आयको सिमा (आर्थिक विवरण) / Income Limit (Annual Details)
+              </p>
             </div>
             <div class="ig ig--2">
               <div class="cbc me-1">
@@ -1380,8 +1487,13 @@
       <div class="standing-instruction pg">
         <div class="pr">
           <div class="pc be">
-            <p class="label">निक्षेप सदस्यले हित्ग्राहीको खातामा भएको घातबढ स्वचालित रुपमा गराउने/ नगराउने।</p>
-            <p class="label">Standing Instruction for the automatic transaction</p>
+            <p class="label">
+              निक्षेप सदस्यले हित्ग्राहीको खातामा भएको घातबढ स्वचालित रुपमा
+              गराउने/ नगराउने।
+            </p>
+            <p class="label">
+              Standing Instruction for the automatic transaction
+            </p>
           </div>
           <div class="pc">
             <div class="ig">
@@ -1456,7 +1568,7 @@
         </div>
       </div>
       <!-- Guardian Name -->
-      <div class="guardian-name pc">
+      <div class="guardian-name pg">
         <div class="pr">
           <div class="pc be">
             <p class="label">नाम/थर:</p>
@@ -1487,9 +1599,7 @@
             <p class="label">Correspondence Address:</p>
           </div>
           <div class="pc">
-            <p class="label">
-              {{guardianAddress}}
-            </p>
+            <p class="label">{{guardianAddress}}</p>
           </div>
         </div>
       </div>
@@ -1503,13 +1613,13 @@
           <div class="pc be">
             <p class="label">{{guardianCountry}}</p>
           </div>
-        </div>
-        <div class="pc be">
-          <p class="label">अंचल:</p>
-          <p class="label">Zone:</p>
-        </div>
-        <div class="pc">
-          <p class="label">{{guardianZone}}</p>
+          <div class="pc be">
+            <p class="label">अंचल:</p>
+            <p class="label">Zone:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{guardianZone}}</p>
+          </div>
         </div>
       </div>
       <!-- Guardian District + Telephone No. -->
@@ -1570,29 +1680,31 @@
         </div>
       </div>
       <!-- Guardian Disclaimer -->
-      <div class="pg nb">
+      <div class="gDis pg nb">
         <div class="pr">
           <div class="pc">
-            <p class="label">
-              नोट:
-            </p>
+            <p class="label">नोट:</p>
           </div>
           <div class="pc">
             <p class="label">
-              १. नाबालकको हकमा संरक्षक तथा नाबालक दुवै फोटो संलग्न गर्नु पर्नेछ। 
+              १. नाबालकको हकमा संरक्षक तथा नाबालक दुवै फोटो संलग्न गर्नु पर्नेछ।
             </p>
             <p class="label">
               २. कानूनी संरक्षक भए सो सम्बन्धी कागजात संलग्न गर्नु पर्नेछ।
             </p>
             <p class="label">
-              ३. आम वा बुबा संरक्षक भएमा छोरा वा छोरीको जन्म दर्ता प्रमाणपत्रको प्रतिलिपि पेश गर्नु पर्नेछ।
+              ३. आम वा बुबा संरक्षक भएमा छोरा वा छोरीको जन्म दर्ता प्रमाणपत्रको
+              प्रतिलिपि पेश गर्नु पर्नेछ।
             </p>
             <p class="label">
-              ४. निवेदकको हस्ताक्षर तथा औंठा छापमा संरक्षकको हस्ताक्षर तथा औंठा छाप हुनु पर्नेछ।
+              ४. निवेदकको हस्ताक्षर तथा औंठा छापमा संरक्षकको हस्ताक्षर तथा औंठा
+              छाप हुनु पर्नेछ।
             </p>
           </div>
         </div>
       </div>
+      <!-- Spacer -->
+      <div class="spacer"></div>
       <!-- NRN Info Section Title -->
       <div class="pg nb">
         <div class="pr">
@@ -1637,34 +1749,333 @@
       <div class="nrn-country-code pg">
         <div class="pr">
           <div class="pc be">
-            देश:
-
-Country:
+            <p class="label">देश:</p>
+            <p class="label">Country:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nrnCountry}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">गैर आवासिय कोड नं.:</p>
+            <p class="label">NRN Code No.:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nrnCode}}</p>
           </div>
         </div>
       </div>
       <!-- Bank Account Section Title -->
-
+      <div class="pg nb">
+        <div class="pr">
+          <div class="pc">
+            <p class="label">बैंक खाता को विवरण:</p>
+            <p class="label">Bank Account Details</p>
+          </div>
+        </div>
+      </div>
       <!-- Types of Bank Account -->
-
+      <div class="bank-type pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">बैंक खाता को किसिम:</p>
+            <p class="label">Types of Bank Account:</p>
+          </div>
+          <div class="pc">
+            <div class="ig">
+              <div class="cbc me-1">
+                <div>
+                  <p class="label">वचत खाता</p>
+                  <p class="label">Savings Account</p>
+                </div>
+                <div class="div cb"></div>
+              </div>
+              <div class="cbc me-1">
+                <div>
+                  <p class="label">चल्ती खाता</p>
+                  <p class="label">Current Account</p>
+                </div>
+                <div class="div cb"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Bank Account No. -->
-
+      <div class="bank-account-no pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">बैंक खाता नम्बर:</p>
+            <p class="label">Bank Account Number:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{bankAccountNo}}</p>
+          </div>
+        </div>
+      </div>
       <!-- Bank Name + Address -->
-
+      <div class="bank-name-address pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">तपाईको बैंक खाता भएको बैंकको नाम र ठेगाना:</p>
+            <p class="label">Name and Address of Bank:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{bankNameAddress}}</p>
+          </div>
+        </div>
+      </div>
       <!-- Nominee Section Title -->
-
+      <div class="pg nb">
+        <div class="pr">
+          <div class="pc">
+            <p class="label">इच्छाईएको व्यक्ति सम्बन्धी विवरण</p>
+            <p class="label">Nominee’s Details</p>
+          </div>
+        </div>
+      </div>
       <!-- Nominee Dislaimer -->
-
+      <div class="pg nb">
+        <div class="pr">
+          <div class="pc">
+            <p class="label">
+              मेरो मृत्यु भएको अवस्था मा देहायाको व्यक्तिले मेरो नाममा भएको
+              सम्पूर्ण धितोपत्रको हक पाउने गरि इच्छाईएको छु।
+            </p>
+            <p class="label">
+              In the event of my death or incapacity the following named nominee
+              shall be entitled to the balance of my demat account.
+            </p>
+          </div>
+        </div>
+      </div>
       <!-- Nominee Name -->
-
+      <div class="nominee-name pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">इच्छाईएको व्यक्तिको नाम:</p>
+            <p class="label">Name of Nominee:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeName}}</p>
+          </div>
+        </div>
+      </div>
       <!-- Nominee Relatiopnship -->
-
+      <div class="nominee-relationship pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">निवेदकसंगको सम्बन्ध:</p>
+            <p class="label">Relationship:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeRelation}}</p>
+          </div>
+        </div>
+      </div>
       <!-- Nominee Citizenship/ Passport + Place of Issue + Age -->
-
+      <div class="nominee-id-issue-age pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">नागरिकता/ राहदानी सम्बर:</p>
+            <p class="label">Citizenship/ Passport No.:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nomineeID}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">जारी ठाउँ:</p>
+            <p class="label">Place of Issue:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nomineeIDIssue}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">उमेर:</p>
+            <p class="label">Age:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeAge}}</p>
+          </div>
+        </div>
+      </div>
       <!-- Nominee Correspondance Address -->
-
+      <div class="nominee-address pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">पत्राचार ठेगाना</p>
+            <p class="label">Correspondence Address</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeAddress}}</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="page">Page 4</div>
+    <div class="page">
+      <!-- Nominee Country + Zone -->
+      <div class="gCountry-zone pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">राष्ट्र:</p>
+            <p class="label">Country:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nomineeCountry}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">अंचल:</p>
+            <p class="label">Zone:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeZone}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Nominee District + Telephone No. -->
+      <div class="gDistrict-tele pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">जिल्ला:</p>
+            <p class="label">District:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nomineeDistrict}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">टेलिफोन नं.:</p>
+            <p class="label">Telephone No.:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeTelephone}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Nominee Fax No + Mobile No. -->
+      <div class="gFax-mobile pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">फ्याक्स नं.:</p>
+            <p class="label">Fax No.:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nomineeLabel}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">मोबाइल नं.:</p>
+            <p class="label">Mobile No.:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeMobile}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Nominee Pan No + E-mail ID -->
+      <div class="gPan-email pg">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">स्थ्यी लेखा नं.:</p>
+            <p class="label">PAN No.:</p>
+          </div>
+          <div class="pc be">
+            <p class="label">{{nomineePAN}}</p>
+          </div>
+          <div class="pc be">
+            <p class="label">ईमेल:</p>
+            <p class="label">E-mail ID:</p>
+          </div>
+          <div class="pc">
+            <p class="label">{{nomineeEmail}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <!-- Map -->
+      <div class="pg mapC">
+        <div class="pr">
+          <div class="pc be">
+            <p class="label">घर रहेको स्थान को नाकशा</p>
+            <p class="label">Location Map</p>
+          </div>
+          <div class="pc">
+            <div class="map">
+              <img
+                src="http://localhost:3000/static/Pointer.svg"
+                alt=""
+                class="map__pointer"
+              />
+              <p class="map__p">
+                From main Road Street
+                <span class="kyc__empty small"></span>
+                the distance of the Residence is
+                <span class="kyc__empty small"></span>
+                meters (approximately)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <!-- Disclaimer -->
+      <div class="pg nb">
+        <div class="pr">
+          <div class="pc">
+            <p class="label">
+              मा/ हामीले निक्षेप सदस्य र हित्ग्राहीको करारनामा, प्रचलित ऐन,
+              नियम, विनायम, सो मा भएको संशोधन मान्न मन्जुर गर्दछु/गर्दछौं। माथि
+              उल्लेखित विवरण सत्य रहेको र सो विवरणमा कुनै फरक परे कानून बमोजिम
+              सहुँला, बुझाउँला। अन्यथा भएमा हित्ग्राही खाता रद्द गर्न मन्जुर
+              गर्दछु/ गर्दछौं।
+            </p>
+            <p class="label">
+              I/We shall accept the terms and conditions relating to the
+              agreement between Depository Participants and Beneficial Owner,
+              prevalent act: regulations, byelaws, and any amendments on it.
+              I/We hereby acknowledge that the above-disclosed details are true.
+              I further hereby consent to borns any legal actions in case any
+              false disclosure of information related to me/us and the
+              Depository Participants reserve the right to close my account. All
+              disputes are subject to the jurisdiction of courts in Kathmandu,
+              Nepal.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <!-- Biometrics -->
+      <div class="pg biometrics nb">
+        <div class="pr">
+          <div class="pc">
+            <p class="label text-center">औंठा छाप</p>
+            <p class="label text-center">Thumb Print</p>
+            <div class="finger-print mt-3">
+              <div class="right be">
+                <p class="label text-center mt-2">दायाँ</p>
+                <p class="label text-center">Right</p>
+              </div>
+              <div class="left">
+                <p class="label text-center mt-2">बायाँ</p>
+                <p class="label text-center">Left</p>
+              </div>
+            </div>
+            <p class="label text-center mt-3">
+              हस्ताक्षर गर्दा कालो मसिको प्रयोग गर्नु पर्नेछ।
+            </p>
+            <p class="label text-center">(Please use Black ink.)</p>
+          </div>
+          <div class="pc ig--1">
+            <p class="label">निवेदकको नाम: {{nameNP}}</p>
+            <p class="label">Applicant's Name: {{nameEN}}</p>
+            <div class="ig--2">
+              <div class="ic">
+                <p class="label">हस्ताक्षर:</p>
+                <p class="label">Signature:</p>
+              </div>
+              <div class="ic sig"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
