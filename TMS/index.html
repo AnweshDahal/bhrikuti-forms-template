@@ -1,0 +1,565 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      @counter-style nepali {
+        system: numeric;
+        symbols: "०" "१" "२" "३" "४" "५" "६" "७" "८" "९";
+      }
+      @counter-style dev {
+        system: cyclic;
+        symbols: "क" "ख" "ग" "घ" "ङ" "च" "छ" "ज" "झ" "ञ" "ट" "ठ" "ड" "ढ" "ण" "त"
+          "थ" "द" "ध" "न" "प" "फ" "ब" "भ" "म" "य" "र" "ल" "व" "श" "ष" "स" "ह"
+          "क्ष" "त्र" "ज्ञ";
+      }
+      .tms {
+        max-height: 2800px;
+        max-width: 794px;
+        margin-inline: auto;
+        font-size: 0.7rem;
+        font-kerning: none;
+        font-family: "Noto Sans Devanagari", sans-serif;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        letter-spacing: 0px;
+        font-smooth: never;
+        text-align: justify;
+      }
+      .tms__container {
+        padding: 1rem;
+      }
+      .tms__title {
+        font-size: 1rem;
+        line-height: 1.1rem;
+        width: 70%; /* margin-bottom: 1rem; */
+        font-weight: 600;
+        margin-inline: auto;
+      }
+      .tms__paragraph {
+        margin-bottom: 0px;
+        text-align: justify;
+      }
+      .tms__subheading {
+        font-size: 1rem;
+      }
+      .tms__list {
+        list-style-type: nepali;
+      }
+      .tms__sublist {
+        list-style-type: dev;
+      }
+      .tms__sublist li {
+        line-height: 1rem;
+      }
+      .tms__empty {
+        display: inline-block;
+        border-bottom: black 1px dotted;
+        text-align: center;
+      }
+      .tms__empty.small {
+        width: 7rem;
+      }
+      .tms__empty.medium {
+        width: 10rem;
+      }
+      .tms__empty.large {
+        width: 12rem;
+      }
+      .tms__table {
+        width: 100%; /*
+      margin-top: 2rem; */
+        font-size: 0.7rem;
+      }
+      .tms__biometrics {
+        margin-left: auto;
+        width: 40%;
+      }
+      .tms__thumbprint {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .tms__left,
+      .tms__right {
+        display: flex;
+        width: 100px;
+        height: 110px;
+        border: 1px solid black;
+      }
+      .tms__left {
+        margin-right: 1rem;
+      }
+      .tms__biometric-title {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+      }
+      .nok {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media print {
+        .pgbr {
+          page-break-before: always;
+        }
+        .pbia {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tms" id="tms">
+      <div class="tms__container">
+        <h1 class="tms__title text-center">
+          धितोपत्र कारोबार सञ्चालन विनियमावली २०७५ को विनियम १० संग सम्बन्धित
+          <br />
+          कारोवार सदस्य र ग्राहक बिचको सम्झौतापत्र
+        </h1>
+        <p class="tms__paragraph text-left">
+          आज
+          <span class="tms__empty small">{{Weekday}}</span>
+          बार, मिति
+          <span class="tms__empty small">{{Today}}</span>
+          का दिन कम्पनी रजिस्ट्रारको कार्यलयमा दर्ता भई नेपाल धितोपत्र बोर्डबाट
+          धितोपत्र दलाल व्यवसायीको इजाजत प्राप्त गरी नेपाल स्टक एक्सचेञ्ज
+          लिमिटेडको कारोबार सदस्य रहेको,
+          <span class="tms__empty"
+            >भृकुटी स्टक ब्रोकिङ्ग क. प्रा. लि. सदस्य नं. ५५, न्युरोड
+          </span>
+          मा रजिस्टर्ड कार्यालय भएको श्री
+          <span class="tms__empty large"></span>
+          (उप्रान्त प्रथम पक्ष भनिनेछ)
+        </p>
+        <p class="tms__paragraph text-center mb-0">तथा</p>
+        <p class="tms__paragraph text-left mb-0">
+          प्रथम पक्ष मार्फत धितोपत्रको कारोबार गर्न/ अनलाईन सुविधा प्रयोग गर्ने
+          ग्राहक संकेत नम्बर (युनिक क्लाईन्ट कोड)
+          <span class="tms__empty small"></span>
+          रहेको
+          <span class="tms__empty">
+            {{body.municipality}} {{body.wardNo}}, {{body.district}}</span
+          >
+          स्थायी ठेगाना भई हाल
+          <span class="tms__empty medium">
+            {{body.municipality_}} {{body.wardNo_}}, {{body.district_}}</span
+          >
+          स्थानमा बसोबास गर्ने श्री
+          <span class="tms__empty">{{body.grandFatherName}}</span>
+          को नाती/नातीनी बुहारी, श्री
+          <span class="tms__empty">{{body.fatherName}}</span>
+          को छोरा/छोरी
+          <span class="tms__empty">{{Age body.dobInAD}}</span>
+          वर्षको श्री
+          <span class="tms__empty">{{body.fullName}}</span>
+        </p>
+        <p class="tms__paragraph text-center mb-0">वा</p>
+        <p class="tms__paragraph text-left mb-3">
+          ग्राहक संकेत नम्बर (युनिक क्लाइन्ट कोड)
+          <span class="tms__empty small"></span>
+          रहेको
+          <span class="tms__empty medium"></span>
+          कार्यालयमा दर्ता भई रजिस्टर्ड कार्यालय
+          <span class="tms__empty medium"></span>
+          मा भएको श्री
+          <span class="tms__empty large"></span>
+          ले (उप्रान्त दोस्रो पक्ष भनिने र सो शब्दले विषय वा प्रसंगले अन्यथा
+          अर्थ लगाएकोमा बाहेक निजका उत्तराधिकारी र/वा कानुनी प्रतिनिधि समेत लाई
+          जनाउने), बीच नेप्सेको कारोबार प्रणालीबाट कारोबार हुने विधि र आफैले
+          कारोबार गर्ने सम्बन्धमा दोस्रो पक्ष सँग आवश्यक ज्ञान रहेको मानी यो
+          सम्झौता (उप्रान्त सम्झौता भनिने छ) सम्पन्न भएको छ ।
+        </p>
+        <h2 class="tms__subheading">
+          यस सम्झौताका पक्षहरू निम्नलिखित शर्तहरू पालना गर्न मञ्जुर छन् :
+        </h2>
+        <ol class="tms__list">
+          <li class="tms__term">
+            प्रचालित धितोपत्र ऐन, नियम, विनियम, कार्यविधि तथा नेपाल राष्ट्र
+            बैंक, बिमा समिति, नेपाल धितोपत्र बोर्ड, नेपाल स्टक एक्सचेन्ज
+            लिमिटेड, सिडिएस एन्ड क्लियरिङ लिमिटेड लगायतका नियमक निकायले समय
+            समयमा जारी गरेका निर्देशिका, परिपत्र र निर्देशन समेतलाई यसै
+            सम्झौतामा उल्लेख भए सरह मानी सम्झौताका पक्षहरुले सोको पालना गर्न
+            मञ्जुर गर्दछन् ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले यस सम्झौता गर्दाको वखत वा यस भन्दा अघि प्रथम पक्षलाई
+            दिएको सूचना, दोस्रो पक्षको ग्राहक परिचय विवरण (केवाइसी) मा भरेको
+            विवरणमा कुनै फेरबदल भए, फेरबदल भएको ७ कार्य दिनभित्र प्रथम पक्षलाई
+            जानकारी दिई आफ्नो पहिचान तथा खाताका विवरणहरु अद्यावधिक गराउन मञ्जुर
+            गर्दछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्ष धितोपत्रको कारोबार गर्न कानून बमोजिम अयोग्य ठहरिने कुनै
+            अवस्था उत्पन्न भई कारवाहीमा परेमा, आर्थिक रुपमा टाट पल्टिएमा विघटनमा
+            गएमा, दामासाहीमा परेमा वा कर्जा सूचना केन्द्रको कालो सूचीमा परेमा वा
+            अन्य कुनै कारणले कानूनत आर्थिक कारोवार गर्न असमर्थ भएमा प्रथम
+            पक्षलाई तुरुन्त जानकारी दिन मञ्जुर गर्दछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले यस सम्झौतामा उल्लेख गरेको वा ग्राहक परिचय विवरण
+            (केवाइसी) मा उल्लेख भएको इमेल ठेगाना वा मोबाइल नम्बरमा दोस्रो पक्षले
+            प्रयोग गर्ने युजरनेम तथा पासवर्ड प्रथम पक्षले उपलब्ध गराउने छ ।
+            प्रथम पक्षले उपलब्ध गराएको वा सो पश्चात दोस्रो पक्षले परिवर्तन गरेको
+            युजरनेम वा पासवर्ड को गोपनियता कायम गर्ने र आफ्नो नियन्त्रणमा राख्ने
+            दायित्व दोस्रो पक्षको हुनेछ ।
+          </li>
+          <li class="tms__term">
+            दोश्रो पक्षले बिक्री कारोवार गर्दा मौज्दातमा धितोपत्र रहेको वा रहने
+            कुनै एक हीतग्राही खाता प्रथम पक्षलाई उपलब्ध गराउने छ । र उक्त खाता
+            अन्य धितोपत्र कारोवार सदस्यलाइ दिने छैन । यदी एउटै खाता अन्य
+            धितोपत्र कारोवार सदस्यलाई दिइ हुने जोखिको जिम्मेवारी दोश्रो पक्ष ले
+            लिनेछ
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षलाई दिइएको युजरनेमबाट भएगरेको सम्पूर्ण कारोबारहरुको
+            दायित्व बहन गर्ने तथा सो को समयमा राफसाफ गर्ने जिम्मेवारी दोस्रो
+            पक्षको हुनेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षलाई प्रदान गरीएको युजरनेमको प्रयोग गरी सिर्जना हुने
+            दायित्व तथा सम्झौतारत पक्ष र नेप्से समेतको सम्पत्तिमा कुनै हानी
+            नोक्सानी भएमा सो प्रति दोस्रो पक्ष जिम्मेवार हुनेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले आफ्नो युजरनेम प्रयोग गरी वा प्रथम पक्षलाई आदेश दिई
+            बिक्री भएका धितोपत्रहरुको निर्देशन पूर्जी जारी गर्नुपर्ने दायित्व
+            दोस्रो पक्षको हुनेछ । यसरी बिक्री भएको धितोपत्रको हस्तान्तरण दोस्रो
+            पक्षले टि+१ को १२ बजे भित्र प्रथम पक्षको राफसाफ खातामा जम्मा गर्न
+            नसकी उक्त कारोवारको राफसाफ हुन नसकेमा सो बाट सिर्जित सम्पूर्ण
+            दायित्व दोस्रो पक्षले वहन गर्नुपर्नेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले धितोपत्र बिक्री गरिसकेपछि सो धितोपत्रको आधार मूल्य
+            प्रथम पक्षलाई राफसाफ समयको १ (एक) दिन पूर्व नै उपलब्ध गराउनु पर्नेछ
+            । आधार मूल्य समयमा उपलब्ध नगराएमा, फर्जी वा गलत आधार मूल्यका कारण
+            उत्पन्न हुने कानूनी तथा आर्थिक दायित्व वा हानी नोक्सानी दोस्रो
+            पक्षले व्यहोर्नु पर्नेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले बिक्रि गरेको धितोपत्रको कारोबारमा लाग्ने कर, शुल्क,
+            दस्तुर तथा अन्य प्रणालीगत शुल्कहरु तथा प्रथम पक्षले धितोपत्र खरीद
+            बिक्री सम्बन्धमा थप सुविधा प्रदान गरेमा लाग्ने थप स्वीकृत दस्तुर
+            कट्टा गरी बाँकी रकम मात्र प्रथम पक्षले दोस्रो पक्षलाई भुक्तानी
+            गर्नेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले खरीद आदेश प्रणालीमा प्रविष्ट गर्दा प्रथम पक्षले तोकेको
+            कारोबार लिमिटको सीमाभित्र रही गर्नु पर्नेछ । दोस्रो पक्षले प्रथम
+            पक्षलाई अग्रिम रूपमा बुझाएको रकमको ४ (चार) गुणा सम्म कारोबार लिमिट
+            प्राप्त गर्न सक्नेछ । उक्त कारोबार सीमा दोस्रो पक्षले बुझाएको रकमको
+            चार गुणा भन्दा बढी हुने छैन ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले कारोबार सीमाका लागि प्रथम पक्षलाई बुझाउने सबै किसिमका
+            भुक्तानी चेक वा अन्य विद्युतीय माध्यमबाट गर्नुपर्नेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले कारोबार प्रयोजनका लागि प्रथम पक्षलाई उपलब्ध गराएको रकम
+            तथा धितोपत्र कारोवार राफसाफ प्रयोजनमा मात्र प्रयोग गर्नुपर्नेछ ।
+          </li>
+          <li class="tms__term">
+            दुवै पक्षको आपसी सहमतिमा दोस्रो पक्षले प्रथम पक्षलाई यस्तो कारोबार
+            सीमाको लागि आवश्यक अग्रिम भुक्तानी बैंक ग्यारेन्टी तथा कारोवारयोग्य
+            धितोपत्रहरुको माध्यमबाट पनि गर्न सक्ने छ । यस्तो धरौटी दोश्रो पक्षले
+            आफ्नो दायीत्व समयमा भुक्तानी नगरेमा प्रथम पक्षले दोस्रो पक्षलाई
+            जानकारी दिई नगदमा परिणत गर्न सक्ने छ ।
+          </li>
+          <li class="tms__term">
+            कारोबार सीमा गणना प्रयोजनको लागि कारोबारयोग्य धितोपत्रको मूल्यांकन
+            बजार मूल्यको बढीमा ७० प्रतिशत सम्म गर्न सकिने छ । धितोपत्र तथा
+            धितोपत्र बजारमा हुने सम्भावित जोखिमलाई मध्यनजर गरी प्रथम पक्षले
+            दोस्रो पक्षलाई उपलब्ध गराएको कारोबार सीमा दोस्रो पक्षलाई जानकारी
+            गराई फेरबदल गर्न सक्नेछ ।
+          </li>
+          <li class="tms__term">
+            खरीद कारोबारपछि बाँकी रहेको रकम खरिद बिल बमोजिम दोस्रो पक्षले टि+२
+            भित्रमा प्रथम पक्षको खातामा जम्मा हुने गरी प्रथम पक्षलाई उपलब्ध
+            गराउनु पर्नेछ । यसरी रकम उपलब्ध गराउदा अग्रिम भुक्तानी रकममा उपलब्ध
+            गराएको भए सो रकम समायोजन गर्ने सुविधा दोस्रो पक्षलाई हुनेछ ।
+          </li>
+          <li class="tms__term">
+            खरिद कारोबार पश्चात दोस्रो पक्षले राफसाफ समय भित्रमा आफ्नो दायित्व
+            पुरा नगरेमा टि+४ मा प्रथम पक्षले दोस्रो पक्षलाई जानकारी गराई दोस्रो
+            पक्षकै नाममा खरिद गरिएको तथा जमानतमा लिइएको धितोपत्र बिक्री, बैंक
+            जमानतबाट रकम र सो को लागत बापतको सोधभर्ना र नपुग रकम कानून बमोजिम
+            असुल उपर गरि लिन सक्नेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षको धितोपत्र बिक्री गरि प्रथम पक्षको लेना रकम असुलउपर गरी
+            रकम बाँकी रहेमा दोस्रो पक्षको अग्रिम भुक्तानी सम्मको रकम दोस्रो
+            पक्षलाई फिर्ता गरी थप रकम बाँकि रहन गए धितोपत्र कारोबार सञ्चालन
+            विनियमावली, २०७५ मा तोकिए बमोजिम हुनेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले खरीद गरेको धितोपत्र खरिदबाट सिर्जित दायित्वहरु पुरा
+            गरेपछि वा कारोवारको राफसाफको दिन मध्ये जुन पछी हुन्छ सो को भोलिपल्ट
+            ग्राहकको निक्षेप खातामा प्रथम पक्षले धितोपत्र हस्तान्तरण गर्नु
+            पर्नेछ ।
+          </li>
+
+          <li class="tms__term">
+            दोस्रो पक्षको नामवाट कारोवार भए पश्चात दोस्रो पक्षको मृत्यु भएमा,
+            दामासाहीमा परेमा, मगज बिग्रिएमा वा अन्य कुनै कारणवाट दोस्रो पक्षको
+            नामवाट भएका कारोवारको राफसाफ हुन नसक्ने स्थिति सिर्जना भएमा उक्त
+            कारोबारको राफसाफको जिम्मेवारी निज वा निजको कानूनी उत्तराधिकारीको
+            हुनेछ । कानुनी उत्तराधिकारीवाट पनि राफसाफ हुन नसकेमा प्रचलित कानून
+            बमोजिम हुनेछ ।
+          </li>
+          <li class="tms__term">
+            नियमक निकायहरुबाट कारोबारहरु रद्द भएमा वा रद्द गर्ने आदेश प्राप्त
+            भएमा सो कारोवारहरु स्वतः रद्द हुनेछन । सो को दायित्व प्रथम पक्षले
+            बहन गर्ने छैन ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्ष नावालक वा कानूनतः पक्षको रुपमा करार गर्न अयोग्य देखिएमा
+            निजको संरक्षक वा प्रतिनिधिले यो सम्झौता गर्न सक्नेछ ।
+          </li>
+          <li class="tms__term">
+            प्रथम पक्षको काबु बाहिरको परिस्थितिको कारणबाट उत्पन्न हुने कुनै पनि
+            दायित्वमा प्रथम पक्ष जिम्मेवार हुने छैन ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले आफ्‌नो कारोवारको निम्ति आदेश दिन लिखित मञ्जुरी दिई
+            प्रतिनिधि नियुक्ति गर्न सक्ने छ सो प्रतिनिधिवाट भएका सम्पूर्ण
+            कारोबारहरु निज दोस्रो पक्षले नै गरेसरह मान्य हुनेछ ।
+          </li>
+          <li class="tms__term">
+            धितोपत्रको कारोबार गर्दा धितोपत्रमा गरिने लगानीमा निहित रहेको जोखिम
+            तथा प्रणालीगत जोखिमका बारेमा दोस्रो पक्ष जानकार रहेको मानिनेछ र सो
+            जोखिमबाट सिर्जित हुने हानी नोक्सानी प्रति दोस्रो पक्ष नै जिम्मेवार
+            रहनेछ ।
+          </li>
+          <li class="tms__term mt-5 pgbr pbia mt-3">
+            दोस्रो पक्षले निम्न लिखित माध्यमवाट कारोबार आदेश दिन सक्ने छ :
+            <ol class="tms__sublist">
+              <li class="tms__term">स्वयं उपस्थित भई लिखित आदेश ।</li>
+              <li class="tms__term">
+                टेलिफोन
+                <span class="tms__empty">{{body.telephoneNo_}}</span>
+              </li>
+              <li class="tms__term">
+                मोबाइल फोन
+                <span class="tms__empty">{{body.mobileNo_}}</span>
+              </li>
+              <li class="tms__term">
+                ई-मेल
+                <span class="tms__empty">{{body.email_}}</span>
+              </li>
+              <li class="tms__term">
+                दोस्रो पक्षको युजरनेम
+                <span class="tms__empty medium"></span>
+              </li>
+              <li class="tms__term">
+                प्रथम पक्षको वेभसाइट
+                <span class="tms__empty">www.bhrikutistock.com</span>
+              </li>
+              <li class="tms__term">
+                अन्य विद्युतीय माध्यम
+                <span class="tms__empty medium"></span>
+              </li>
+            </ol>
+            प्रथम पक्षले उल्लिखित माध्यमबाट आएका आदेशहरुलाई मात्र वैधानिक
+            मान्यता दिई प्राथमिकताका आधारमा कारोबार प्रणालीमा आदेश प्रविष्टी
+            गर्नेछ । नियम अनुसार उक्त आदेशहरुको सुरक्षित रेकर्डिङ्ग तथा भण्डारण
+            प्रथम पक्षले गर्न सक्नेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षको मार्जिन कारोवार सुविधा उपयोग गर्ने भएमा सो सम्बन्धी
+            सर्त तथा सुविधाहरु सम्बन्धित नियममा तोकिए बमोजिम हुनेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले धितोपत्र कारोवार गर्दा उक्त धितोपत्र कारोवार गर्न
+            प्रचलित कानुन वमोजिम आफु योग्य रहेको र सो धितोपत्रमा आफुले कानून
+            बमोजिम धारण गर्न सक्ने सीमा भित्र रहि खरीद आदेश प्रविष्ट गर्नु पर्ने
+            छ । सो नगरेबाट सिर्जित परिणाम तथा दायित्व दोस्रो पक्षको हुनेछ ।
+          </li>
+          <li class="tms__term">
+            प्रचलित नीति नियममा उल्लेख भएअनुसार वा सम्बन्धित निकायहरुबाट
+            धितोपत्रको कारोबारको श्रोतको जानकारी गराउन आवश्यक रहेमा उक्त जानकारी
+            कारोबार राफसाफ समयाबधीभित्र प्रथम पक्षलाई बुझाउन दोस्रोपक्ष मञ्जुर
+            गर्दछ । दोस्रो पक्षले प्रचलित कानुन बमोजिम अवैधानिक नठहरीने रकमहरु
+            मात्र धितोपत्रमा लगानी गर्नुपर्ने छ ।
+          </li>
+          <li class="tms__term">
+            पक्षहरुबिच आपसि सहमतीमा एक महिनाको अग्रिम सूचना दिई यो सम्झौता रद्द
+            गर्न सकिनेछ । सम्झौता रद्द गर्नु पूर्व पक्षहरुले आ-आफ्नो दायित्व
+            पूरा गरेको हुनु पर्नेछ ।
+          </li>
+          <li class="tms__term">
+            प्रचलित कानून बमोजिम प्रथम पक्षले व्यवसाय सञ्चालनका लागि प्राप्त
+            गरेको इजाजत, अनुमतिपत्र, सदस्यता खारेज भइ कारोबार गर्न अयोग्य भएमा
+            यो सम्झौता स्वतः खारेज हुनेछ । यसरी सम्झौता खारेज भए पनि बाँकी
+            बक्यौता फछ्यौट गर्नुपर्ने दायित्व दुवै पक्षको हुनेछ ।
+          </li>
+          <li class="tms__term">
+            यस सम्झौताअनुसार प्रथम पक्षले दिने अथवा आवश्यक हुने कुनै पनि जनाउ वा
+            सञ्चार तोकिएको माध्यमबाट दोस्रो पक्षको अद्यावधिक ठेगानामा पठाए
+            पश्चात दोस्रो पक्षले जानकारी पाए सरह हुनेछ ।
+          </li>
+          <li class="tms__term">
+            सम्झौताका दुवै पक्षहरुले नेप्से अनलाइन कारोबार प्रणालीमा क्षति
+            पुऱ्याउने कुनै पनि कार्य गर्ने छैनन् ।
+          </li>
+          <li class="tms__term">
+            प्रथम पक्षले प्रचलित कानूनमा उल्लेख भएको अवस्थामा बाहेक दोस्रो
+            पक्षको गोपनीयता कायम गर्नेछ ।
+          </li>
+          <li class="tms__term">
+            पक्षहरुका बीचमा उत्पन्न हुनसक्ने विवाद तथा मतभिन्नताहरुको समाधान
+            सकेसम्म आपसी सहमतिमा निराकरण गरिनेछ । आपसी सहमतीबाट समाधान गर्न
+            नसकेमा धितोपत्र कारोबार सञ्चालन विनियमावली, २०७५ मा तोकिए बमोजिम
+            बमोजिम हुनेछ ।
+          </li>
+          <li class="tms__term">
+            दोस्रो पक्षले देहायका सुविधा उपयोग गरे बापत तोकिएको शुल्क तिर्न
+            मञ्जुर गर्दछ ।
+            <ul style="list-style-type: disc">
+              <li class="tms__term">अनलाईन कारोबार सुविधा</li>
+              <li class="tms__term">एसएमएस सुविधा</li>
+              <li class="tms__term">
+                अन्य
+                <span class="tms__empty small"></span>
+              </li>
+            </ul>
+            दोस्रो पक्षले उल्लिखित सुविधाहरु प्राप्त गर्न हरेक आर्थिक वर्षमा
+            नविकरण शुल्क तिर्नुपर्नेछ ।
+          </li>
+          <li class="tms__term">
+            यो सम्झौतामा उल्लेख तथा व्याख्या नभएका विषय प्रचलित नेपाल
+            कानूनद्वारा नियमन तथा व्याख्या हुनेछ ।
+          </li>
+          <li class="tms__term">
+            यो सम्झौता दुवै पक्षले हस्ताक्षर गरेको मितिबाट
+            <span class="tms__empty small"></span>
+            सम्म कायम रहने छ र दुवै पक्षको सहमतीबाट सम्झौता पुनः नविकरण हुन
+            सक्नेछ ।
+          </li>
+          <li class="tms__term">
+            यो सम्झौता राम्ररी पढी, बुझी दुवै पक्ष हस्ताक्षर गर्न मञ्जुर गर्दछौं
+            ।
+          </li>
+        </ol>
+        <table class="tms__table mt-1">
+          <tr class="tms__table-row">
+            <td class="tms__table-data">
+              <u class="tms__table-text">प्रथम पक्ष</u>
+            </td>
+            <td class="tms__table-data">
+              <u class="tms__table-text">दोस्रो पक्ष</u>
+            </td>
+          </tr>
+          <tr class="tms__table-row">
+            <td class="tms__table-data">
+              <span class="tms__table-text"
+                >प्रथम पक्षको तर्फबाट अधिकार प्राप्त</span
+              >
+            </td>
+            <td class="tms__table-data">
+              <span class="tms__table-text"
+                >दोस्रो पक्षको तर्फबाट अधिकार प्राप्त</span
+              >
+            </td>
+          </tr>
+          <tr class="tms__table-row">
+            <td class="tms__table-data">
+              <span class="tms__table-text">व्यक्तीको नाम :</span>
+            </td>
+            <td class="tms__table-data">
+              <span class="tms__table-text">व्यक्तीको नाम :</span>
+              <span class="tms__empty">{{body.fullName}}</span>
+            </td>
+          </tr>
+          <tr class="tms__table-row">
+            <td class="tms__table-data">
+              <span class="tms__table-text">दस्तखत :</span>
+            </td>
+            <td class="tms__table-data">
+              <span class="tms__table-text">दस्तखत :</span>
+              <span class="tms__empty"
+                >{{#if file.clientSignature}} {{LinkFormatter
+                file.clientSignature.filename "signatureC"}} {{/if}}</span
+              >
+            </td>
+          </tr>
+          <tr class="tms__table-row">
+            <td class="tms__table-data">
+              <span class="tms__table-text">कम्पनीको नाम / छाप</span>
+            </td>
+            <td class="tms__table-data">
+              <span class="tms__table-text">कम्पनीको नाम / छाप</span>
+            </td>
+          </tr>
+        </table>
+        <div class="tms__biometrics mt-2">
+          <p class="tms__text mb-0">औंठा छाप:</p>
+          <div class="tms__thumbprint">
+            <div class="tms__right">
+              {{#if file.rightThumbPrint}} {{TMSFingerPrint
+              file.rightThumbPrint.filename}} {{else}}
+              <span class="tms__biometric-title">दायाँ</span>
+              {{/if}}
+            </div>
+            <div class="tms__left">
+              {{#if file.leftThumbPrint}} {{TMSFingerPrint
+              file.leftThumbPrint.filename}} {{else}}
+              <span class="tms__biometric-title">बायाँ</span>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+        <div class="tms__paragraph nok mb-0">
+          <div class="tms__paragraph-element mb-0">
+            <p class="tms__paragraph-content mb-0">
+              <u>साक्षी</u>
+            </p>
+            <p>१ <span class="tms__empty medium"></span></p>
+          </div>
+          <div class="tms__paragraph-element mb-0">
+            <p class="tms__paragraph-content mb-0">
+              <u>साक्षी</u>
+            </p>
+            <p>१ <span class="tms__empty medium">{{body.fatherName}}</span></p>
+          </div>
+        </div>
+        <p class="tms__paragraph text-center">
+          ईति सम्वत
+          <span class="tms__empty small">{{thisYear}}</span>
+          साल
+          <span class="tms__empty small">{{thisMonth}}</span>
+          महिना
+          <span class="tms__empty small">{{thisDate}}</span>
+          गते रोज शुभम् ।
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

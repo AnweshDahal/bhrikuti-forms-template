@@ -1,0 +1,329 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      p {
+        margin-bottom: 0px !important;
+      }
+      .mlo {
+        max-width: 794px;
+        margin-inline: auto;
+        font-family: "Noto Sans Devanagari", sans-serif;
+        font-size: 0.9rem;
+        font-kerning: none;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        letter-spacing: 0px;
+        font-smooth: never;
+        text-align: justify;
+      }
+      .mlo__container {
+        padding: 1rem;
+      }
+      .mlo__disclaimer {
+        width: 80%;
+        margin-inline: auto;
+      }
+      .mlo__header {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 3.15cm;
+        border-top: 1px solid black;
+        text-align: center;
+      }
+      .mlo__title {
+        text-decoration: underline;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .mlo__photo {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        width: 3cm;
+        height: 3.1cm;
+      }
+      .mlo__body {
+        position: relative;
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
+      }
+      .mlo__bio {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        display: flex;
+      }
+      .mlo__cell {
+        width: 2.75cm;
+        height: 2.75cm;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .mlo__paragraph {
+        /*
+      display: flex; */
+        margin-block: 0.25rem;
+      }
+      .mlo__footer {
+        position: relative;
+      }
+      .mlo__footer-image {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        width: 3cm;
+        height: 3.3cm;
+      }
+      .mlo__footer-list {
+        margin-bottom: 0.5rem;
+      }
+      .mlo__empty {
+        display: inline-block;
+        min-width: 4rem;
+        border-bottom: black 1px dotted;
+        min-height: 1rem;
+        font-size: 0.8rem;
+        line-height: 1rem;
+      }
+      .mlo__empty.medium {
+        width: 10rem;
+        text-align: center;
+      }
+      .mlo__empty.small {
+        text-align: center;
+      }
+      .mlo__empty.large {
+        width: 30rem;
+      }
+      .endp {
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mlo">
+      <div class="mlo__container">
+        <div class="mlo__disclaimer text-center">
+          सम्पति शुद्दिकरण (मनी लउण्डरिङ्ग ) निवारण गर्ने सम्बन्धमा पेश
+          गर्नुपर्ने विवरण र जोखिम व्यवस्थापनका सम्बन्धमा नेपाल राष्ट्र बैंक
+          वित्तीय जानकारी ईकाइले धितोपत्र सम्बन्धि ऐन २०६३, बमोजिम धितोपत्र
+          व्यवसाय गर्न अनुमति प्राप्त कम्पनी वा संस्थालाई जारी गरेको निर्देशन
+          संग सम्बन्धित :
+        </div>
+        <div class="mlo__header">
+          <h1 class="mlo__title">ग्राहकको परिचय विवरण:</h1>
+          <div class="mlo__photo">
+            {{#if file.photoPP}} {{LinkFormatter file.photoPP.filename "photo"}}
+            {{else}}
+            <p class="mlo__label">फोटो</p>
+            {{/if}}
+          </div>
+        </div>
+        <div class="mlo__body">
+          <div class="mlo__bio">
+            <div class="mlo__cell">
+              {{#if file.rightThumbPrint}} {{LinkFormatter
+              file.rightThumbPrint.filename "fingerPrint"}} {{else}}
+              <p class="mlo__cell-text">दा.</p>
+              {{/if}}
+            </div>
+            <div class="mlo__cell">
+              {{#if file.leftThumbPrint}} {{LinkFormatter
+              file.leftThumbPrint.filename "fingerPrint"}} {{else}}
+              <p class="mlo__cell-text">बा.</p>
+
+              {{/if}}
+            </div>
+          </div>
+          <p class="mlo__paragraph">
+            १.) स्पष्ट नाम / थर / नेपालीमा :
+            <span class="mlo__empty large">{{body.fullNameNP}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            २.) बाबुको नाम :
+            <span class="mlo__empty large">{{body.fatherNameNP}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            ३.) बाजेको नाम :
+            <span class="mlo__empty large">{{body.grandFatherNameNP}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            ४.) पति/ पत्नीको नाम :
+            <span class="mlo__empty large">{{body.spouseNameNP}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            ५.) स्थयी ठेगाना :
+            <br />
+            <span class="mlo__empty medium">{{body.province}}</span>
+            प्रदेश
+            <span class="mlo__empty medium">{{body.district}}</span>
+            जिल्ला
+            <span class="mlo__empty medium">{{body.municipality}}</span>
+            गा.पा./न.पा./उप म.न.पा./म.न.पा.
+            <span class="mlo__empty medium">{{body.wardNo}}</span>
+            वडा नं.
+            <span class="mlo__empty medium">{{body.tole}}</span>
+            टोल
+            <span class="mlo__empty medium">{{body.blockNo}}</span>
+            ब्लक नं.
+            <span class="mlo__empty medium">{{body.poBoxNo}}</span>
+            पोष्ट बक्स नं.
+            <span class="mlo__empty medium">{{body.houseNo}}</span>
+            घर नं.
+          </p>
+          <p class="mlo__paragraph">
+            ६.) अस्थायी ठेगाना :
+            <br />
+
+            <span class="mlo__empty medium">{{body.province_}}</span>
+            प्रदेश
+            <span class="mlo__empty medium">{{body.district_}}</span>
+            जिल्ला
+            <span class="mlo__empty medium">{{body.municipality_}}</span>
+            गा.पा./न.पा./उप म.न.पा./म.न.पा.
+            <span class="mlo__empty medium">{{body.wardNo_}}</span>
+            वडा नं.
+            <span class="mlo__empty medium">{{body.tole_}}</span>टोल
+            <span class="mlo__empty medium">{{body.blockNo_}}</span>
+            ब्लक नं.
+            <span class="mlo__empty medium">{{body.poBoxNo_}}</span>
+            पोष्ट बक्स नं.
+            <span class="mlo__empty medium">{{body.houseNo_}}</span>
+            घर नं.
+          </p>
+          <p class="mlo__paragraph">
+            ७.) ग्राहकको पेशा:
+            <span class="mlo__empty medium">{{body.occupation}}</span>
+            पेशाको विवरण
+            <span class="mlo__empty medium">{{body.typeOfBusiness}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            ८.) जन्म मिति: (बि. सं)
+            <span class="mlo__empty small">{{body.dobBSYear}}</span>
+            साल
+            <span class="mlo__empty small">{{body.dobBSMonth}}</span>
+            महिना
+            <span class="mlo__empty small">{{body.dobBSDate}}</span>
+            गते / (ई. सं.)
+            <span class="mlo__empty small">{{body.dobADYear}}</span>
+            साल
+            <span class="mlo__empty small">{{body.dobADMonth}}</span>
+            महिना
+            <span class="mlo__empty small">{{body.dobADDate}}</span>
+            गते
+          </p>
+          <p class="mlo__paragraph">
+            ९.) टेलिफोन नं.
+            <span class="mlo__empty medium">{{body.telephoneNo_}}</span>
+            मोबाइल नं.
+            <span class="mlo__empty medium">{{body.mobileNo_}}</span>
+            ईमेल ठेगाना
+            <span class="mlo__empty medium">{{body.email_}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            १०.) नागरिकता नं.
+            <span class="mlo__empty medium">{{body.citizenshipNo}}</span>
+            जारी मिति
+            <span class="mlo__empty medium">{{body.issueDate}}</span>
+            जारी गरिएको स्थान
+            <span class="mlo__empty medium">{{body.issueDistrict}}</span>
+          </p>
+          <p class="mlo__paragraph">
+            ११.) पासपोर्ट नं.
+            <span class="mlo__empty medium">{{body.passportNo}}</span>
+            जारी मिति
+            <span class="mlo__empty medium">{{body.passportIssueDate}}</span>
+            जारी गरिएको स्थान
+            <span class="mlo__empty medium"
+              >{{body.passportIssueDistrict}}</span
+            >
+          </p>
+          <p class="mlo__paragraph">
+            मैले लगानी गरेको रकम (खरिद वा बिक्रि ) मेरो आफ्नै नेपाल कानुन सम्मत
+            आय आर्जनबाट प्राप्त भएको हो। माथि उल्लेखित विवरणहरु ठिक सांचो छ।
+            झुठा ठहरिएमा कानुन बमोजिम सहुंला बुझाउंला।
+          </p>
+          <p class="mlo__paragraph endp">
+            दस्तखत :
+            <span class="mlo__empty medium"
+              >{{#if file.clientSignature}} {{LinkFormatter
+              file.clientSignature.filename "signatureC"}} {{/if}}</span
+            >
+          </p>
+          <p class="mlo__paragraph mt-3">
+            मिति :
+            <span class="mlo__empty medium">{{Today}}</span>
+          </p>
+        </div>
+        <div class="mlo__footer">
+          <div class="mlo__footer-image">
+            {{#if file.guardianPP}} {{LinkFormatter file.guardianPP.filename
+            "photo"}} {{else}}
+            <p class="mlo__image-text">संरक्षकको फोटो</p>
+            {{/if}}
+          </div>
+          <h2 class="mlo__subheading text-center mt-2">
+            अनिवार्य रुपमा संलग्न गर्नुपर्ने कागजातहरु:
+          </h2>
+          <ul class="mlo__footer-list mb-0">
+            <li class="mlo__doc">फोटो</li>
+            <li class="mlo__doc">नागरिकता / पासपोर्टको प्रतिलिपि</li>
+            <li class="mlo__doc">
+              नेपाल सरकार वा नेपाल सरकारको स्वामित्व भएको संस्थामा काम गर्ने
+              कर्मचारी भए परिचयपत्रको प्रतिलिपि
+            </li>
+            <li class="mlo__doc">
+              नावालकको हकमा जन्मदर्ता प्रमाणपत्रको प्रतिलिपि, संरक्षकको
+              नागरिकताको प्रतिलिपि, स्थायी लेखा नं. लिएको भए सोको प्रतिलिपि
+            </li>
+            <li class="mlo__doc">
+              विवाह दर्ता प्रमाणपत्रको प्रतिलिपि (विवाहित महिला भएमा)
+            </li>
+            <li class="mlo__doc">
+              अन्य कागजातहरु संलग्न गर्नुपर्ने भएमा ग्रहम स्वयंले बुझाउनुपर्ने
+            </li>
+          </ul>
+          <p class="mlo__paragraph mt-0">ग्राहक स्वयंले नै भर्नु पर्ने</p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
