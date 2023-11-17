@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Corporate KYC</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <style>
+            * {
+                margin: 0px;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .ckyc {
+                max-width: 794px;
+                margin-inline: auto;
+                font-family: 'Noto Sans Devnagari', sans-serif;
+                font-size: 0.9rem;
+                letter-spacing: 0px;
+                text-align: justify;
+            }
+
+            .ckyc__p {
+                font-size: 0.8rem !important;
+                line-height: 1rem;
+                text-align: left;
+                margin-bottom: 0rem;
+            }
+
+            .page {
+                max-width: 789px;
+                margin-inline: auto;
+                font-family: 'Noto Sans Devanagari', sans-serif;
+                font-kerning: none;
+                -webkit-font-smoothing: none;
+                -moz-osx-font-smoothing: none;
+                letter-spacing: 0px;
+                text-align: justify;
+                padding: 1rem;
+                break-inside: avoid;
+                page-break-before: always;
+            }
+
+            @media print {
+                .page {
+                    page-break-before: always;
+                    break-inside: avoid;
+                }
+            }
+
+            .ckyc__row {
+                display: grid;
+                padding: 0.5rem;
+            }
+
+            .ckyc__row.official {
+                grid-template-columns: 3fr 7fr;
+                border: 1px solid black;
+            }
+
+            .ckyc__table {
+                width: 100%;
+            }
+
+            .ckyc__table,
+            .ckyc__td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            .ckyc__td {
+                padding: 0.2rem;
+            }
+
+            .np {
+                padding: 0px !important;
+            }
+
+            .ckyc__header .underline {
+                text-decoration: underline;
+            }
+
+            .ckyc__empty {
+                display: inline-block;
+                min-width: 9rem;
+                border-bottom: 1px dashed black;
+            }
+
+            .cells {
+                display: grid;
+                padding: 0px !important;
+            }
+
+            .name.cells {
+                grid-template-columns: repeat(20, 1fr);
+                min-height: 1.5rem;
+            }
+
+            .ckyc__td.eCell {
+                display: gird;
+            }
+
+            .c-block {
+                border-right: 1px solid black;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                min-height: 1rem;
+                text-transform: uppercase;
+            }
+
+            .c-block:last-child {
+                border: none;
+            }
+
+            .ig {
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ckyc">
+            <div class="page">
+                <div class="ckyc__header">
+                    <div class="ckyc__title">
+                        <p class="ckyc__p underline text-center mb-1">
+                            <strong>कम्पनी वा संस्थाको परिचय विवरण</strong>
+                        </p>
+                        <p class="ckyc__p underline text-center mb-3">
+                            <strong>Details of Company or Institution</strong>
+                        </p>
+                    </div>
+                    <!-- Small Space -->
+                    <!-- Full Border -->
+                    <div class="ckyc__row official">
+                        <div class="ckyc__col">
+                            <p class="ckyc__p">
+                                <strong>कार्यालय प्रयोजनका लागि</strong>
+                            </p>
+                            <p class="ckyc__p">
+                                <strong>For Official Use Only</strong>
+                            </p>
+                        </div>
+                        <!-- Blank Table -->
+                        <table class="ckyc__table" st>
+                            <tr class="ckyc__tr">
+                                <td class="ckyc__td" width="30%">
+                                    <p class="ckyc__p">ग्राहक नम्बर:</p>
+                                    <p class="ckyc__p">Client’s Account No.:</p>
+                                </td>
+                                <td class="ckyc__td" width="30%">
+                                    101001101011
+                                </td>
+                                <td class="ckyc__td" width="10%">
+                                    <p class="ckyc__p">मिति:</p>
+                                    <p class="ckyc__p">Date:</p>
+                                </td>
+                                <td class="ckyc__td" width="30%"></td>
+                            </tr>
+                            <tr class="ckyc__tr">
+                                <td class="ckyc__td">
+                                    <p class="ckyc__p">संकेत नम्बर:</p>
+                                    <p class="ckyc__p">Reference No.:</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Disclaimer -->
+                    <p class="ckyc__p disclaimer my-3">
+                        तल उल्लेखित सम्पूर्ण विवरण राम्रोसंग भर्नु पर्नेछ।
+                        आफूसंग सरोकार नभएको विवरण उल्लेख गर्ने कोठामा तेर्सो
+                        धर्का तनिदिनु होला। <br />Please complete all details
+                        and strike out the non-applicable fields/boxes.
+                    </p>
+                    <p class="ckyc__p">
+                        <span class="ckyc__empty medium">Maharajgunj</span>
+                        <span>(शाखा)</span>
+                    </p>
+                </div>
+                <table class="ckyc__table mt-3">
+                    <!-- Nepali Name -->
+                    <tr class="ckyc__tr input">
+                        <td class="ckyc__td" width="20%">
+                            <p class="ckyc__p">नाम :</p>
+                        </td>
+                        <td class="ckyc__td" width="80%">
+                            <p class="ckyc__p">{{ body.nameNP }}</p>
+                        </td>
+                    </tr>
+                    <!-- English Name -->
+                    <tr class="ckyc__tr input">
+                        <td class="ckyc__td" width="20%">
+                            <p class="ckyc__p">Name (In Block Letter):</p>
+                        </td>
+                        <td class="ckyc__td np eCell" width="80%">
+                            <div class="name cells">
+                                <div class="c-block">
+                                    <p class="ckyc__p">A</p>
+                                </div>
+                                <div class="c-block">
+                                    <p class="ckyc__p">A</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Name of Executive Nepali -->
+                    <tr class="ckyc__tr input">
+                        <td class="ckyc__td" width="20%">
+                            <p class="ckyc__p">कार्यकरी प्रमुखको नाम:</p>
+                        </td>
+                        <td class="ckyc__td" width="80%">
+                            <p class="ckyc__p">
+                                {{ body.nameOfChiefExecutiveNP }}
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Name of Executive English -->
+                    <tr class="ckyc__tr input">
+                        <td class="ckyc__td" width="25%">
+                            <p class="ckyc__p">Name of Chief Executive:</p>
+                        </td>
+                        <td class="ckyc__td np eCell" width="70%">
+                            <div class="name cells">
+                                <div class="c-block">
+                                    <p class="ckyc__p">A</p>
+                                </div>
+                                <div class="c-block">
+                                    <p class="ckyc__p">A</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Name of Company Secretary Nepali -->
+                    <tr class="ckyc__tr input">
+                        <td class="ckyc__td" width="20%">
+                            <p class="ckyc__p">कम्पनी सचिबको नाम:</p>
+                        </td>
+                        <td class="ckyc__td" width="80%">
+                            <p class="ckyc__p">{{ body.nameofSecretaryNP }}</p>
+                        </td>
+                    </tr>
+                    <!-- Name of Company Secretary English -->
+                    <tr class="ckyc__tr input">
+                        <td class="ckyc__td" width="25%">
+                            <p class="ckyc__p">Company Secretary’s Name:</p>
+                        </td>
+                        <td class="ckyc__td np eCell" width="70%">
+                            <div class="name cells">
+                                <div class="c-block">
+                                    <p class="ckyc__p">A</p>
+                                </div>
+                                <div class="c-block">
+                                    <p class="ckyc__p">A</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Split -->
+                <table class="ckyc__table mt-3">
+                    <tr class="ckyc__tr">
+                        <td class="ckyc__td" width="20%">
+                            <p class="ckyc__p">स्थापना मिति:</p>
+                            <p class="ckyc__p">Date of Incorporation:</p>
+                        </td>
+                        <td class="ckyc__td" width="30%">
+                            <div class="ig">
+                                <p class="ckyc__p me-2">
+                                    बि.सं.<br />
+                                    B.S.
+                                </p>
+                                <p class="ckyc__p">
+                                    {{ body.dateOfIncorporationBS }}
+                                </p>
+                            </div>
+                        </td>
+                        <td class="ckyc__td" width="30%">
+                            <div class="ig">
+                                <p class="ckyc__p me-2">
+                                    ई.सं.<br />
+                                    A.D.
+                                </p>
+                                <p class="ckyc__p">
+                                    {{ body.dateOfIncorporationAD }}
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
