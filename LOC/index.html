@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .loc {
+        max-width: 794px;
+        margin-inline: auto;
+        font-family: "Noto Sans Devnagari", sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        letter-spacing: 0px;
+        text-align: justify;
+        padding: 1rem;
+      }
+
+      h2 {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      .empty {
+        display: inline-block;
+        min-width: 5rem;
+        border-bottom: 1px dotted black;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 2px;
+      }
+
+      .box {
+        border: 1px solid;
+      }
+    </style>
+    <title>LOC</title>
+  </head>
+  <body>
+    <div class="loc">
+      <div class="page">
+        <h2 class="text-center">मन्जुरीनामा</h2>
+
+        <p>
+          श्रीमान <span class="empty"></span> ज्यू,<br />
+          <span class="empty"></span>
+        </p>
+        <p>
+          <span class="empty">{{body.sDistrict}}</span> जिल्ला
+          <span class="empty">{{body.sMunicipality}}</span> नगरपालिका/ गा.बि.स.
+          वडा नं. <span class="empty">{{body.sWardNo}}</span> बस्ने
+          <span class="empty">{{body.sGrandfatherName}}</span> को नाति/ नातिनी
+          <span class="empty">{{body.sFatherName}}</span> को छोरा/छोरी, वर्ष
+          <span class="empty">{{body.sAge}}</span> को/की मेरो
+          <span class="empty">{{body.sRelation}}</span> नाता पर्ने
+          <span class="empty">{{body.sName}}</span> को नाममा त्यस कार्यालयमा
+          दर्ता श्रेष्ता कायम रहेको
+          <span class="empty">{{body.companyName}}</span> कम्पनीको जम्मा
+          <span class="empty">{{body.shareQuantity}}</span> कित्ता शेयर वा
+          सम्पूर्ण कम्पनीका सम्पूर्ण शेयरहरु वा तपिशल बमोजिमका शेयरहरु
+          <span class="empty">{{body.rDistrict}}</span> जिल्ला
+          <span class="empty">{{body.rMunicipality}}</span> नगरपालिका/ गा.बि.स.
+          वडा नं. <span class="empty">{{body.rWardNo}}</span> बस्ने
+          <span class="empty">{{body.rGrandfatherName}}</span> को नाति/नातिनी
+          <span class="empty">{{body.rFatherName}}</span> को छोरा/छोरी, वर्ष
+          <span class="empty">{{body.rAge}}</span> को/की मेरो
+          <span class="empty">{{body.rRelation}}</span> नाता पर्ने
+          <span class="empty">{{body.rName}}</span> को नाममा नामसारी गरिदीन यो
+          मन्जुरीनामा लेखी दिएको/दिएकी छु; पछि यस सम्बन्धमा कही कतै निकायमा
+          उजुरवाजुर गर्ने/ गराउने छैन, गरे यसै मन्जुरीनामाको कागजले बदर होश भनी
+          मेरो मनोमानी रजिखुशीका साथ किनाराका शाक्षीका रोहवारमा यो मन्जुरीनामा
+          लेखी दिएकोछु। ईती सम्बत <span class="empty">AD</span> साल
+          <span class="empty">{{thisYear}}</span> महिना
+          <span class="empty">{{thisMonth}}</span> गते रोज
+          <span class="empty">{{thisDate}}</span> शुभम्
+          <span class="empty"></span>।
+        </p>
+        <h2 class="text-center">तपिशल</h2>
+        <table>
+          <thead>
+            <tr>
+              <th width="25%">क्र.सं.</th>
+              <th width="50%">कम्पनी को नाम</th>
+              <th width="25%">शेयर संख्या</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{security.sn}}</td>
+              <td>{{body.companyName}}</td>
+              <td>{{body.shareQuantity}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row mt-3">
+          <div class="col">
+            <p>
+              मन्जुरीनामा दिनेको नाम:
+              <span class="empty">{{body.applicantName}}</span><br />
+              सही:<span class="empty">{{SignatureLOC}}</span><br />
+              मोबाईल नं.: <span class="empty">{{files.mobileNo}}</span><br />
+            </p>
+          </div>
+          <div class="col">
+            <p>औंठा छाप</p>
+            <div class="row">
+              <div class="col box">
+                <p>दायाँ</p>
+                {{RightLOC}}
+              </div>
+              <div class="col box">
+                <p>बाँयाँ</p>
+                {{LeftLOC}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          माथि उल्लेखित मन्जुरीनामा दिने व्यक्ति यस कार्यालयमा स्वयं उपस्थित भई
+          मन्जुरीनामा दिएको साँचो हो। झुठा ठहारेमा कानून बमोजिम सहुँला बुझाउला
+          भनि प्रमाणित गरिन्छ। <br /><br />
+
+          कम्पनि को नाम र छाप:<br /><br />
+
+          प्रमाणित गर्ने व्यक्तिको नाम र पद:<br /><br />
+
+          हस्ताक्षर:<br />
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
