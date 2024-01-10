@@ -62,11 +62,28 @@
         padding: 2px;
         word-break: break-all;
       }
-      .box{
+      .box {
         display: inline-block;
         width: 10rem;
         height: 2rem;
-        border: 1px solid ;
+        border: 1px solid;
+      }
+
+      .empty {
+        display: inline-block;
+        min-width: 5rem;
+        height: 1.35rem;
+        border-bottom: 1px solid black;
+      }
+
+      @media print {
+        .avoid-break {
+          break-inside: avoid;
+        }
+        .page {
+          page-break-before: always;
+          break-inside: avoid;
+        }
       }
     </style>
     <title>PF</title>
@@ -115,7 +132,7 @@
           साथ संलग्न गरि निवेदन दिएको हुनाले आवश्यक व्यवस्था मिलाई दिनु हुन
           अनुरोध गर्दाछु/ छौं।
         </p>
-        <table style="margin-bottom: -1px">
+        <table style="margin-bottom: -1px" class="mt-2">
           <tbody>
             <tr>
               <td width="20%">
@@ -169,10 +186,14 @@
             </tr>
           </tbody>
         </table>
-        <div class="row mt-3">
+        <div class="row mt-3 avoid-break">
           <div class="col">
-            <p class="d-flex align-items-center mb-2">निक्षेप सदस्यमा भएको दस्तखत:&nbsp; <span class="box"></span></p>
-            <p class="d-flex align-items-center mb-2">कम्पनीमा भएको दस्तखत: &nbsp;<span class="box"></span></p>
+            <p class="d-flex align-items-center mb-2">
+              निक्षेप सदस्यमा भएको दस्तखत:&nbsp; <span class="box"></span>
+            </p>
+            <p class="d-flex align-items-center mb-2">
+              कम्पनीमा भएको दस्तखत: &nbsp;<span class="box"></span>
+            </p>
             <p>नाम/ थर: {{body.name}}</p>
             <p>बाबु/ संचालकको नाम/ थर: {{body.guardianName}}</p>
             <p>बजेको नाम/ थर:{{body.grandfatherName}}</p>
@@ -189,7 +210,9 @@
             <p>लकिङ्ग भएको कारण: {{body.reasonForLocking}}</p>
             <p>लकिङ्ग भएको मिति सम्म: {{body.lockingDate}}</p>
           </div>
-          <h4 class="text-end mt-3">भृकुटी स्टक बोर्किङ्ग कम्पनी प्रा. ली.</h4>
+          <h4 class="text-end mt-3 avoid-break">
+            भृकुटी स्टक बोर्किङ्ग कम्पनी प्रा. ली.
+          </h4>
         </div>
       </div>
     </div>

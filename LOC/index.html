@@ -64,6 +64,16 @@
       .box {
         border: 1px solid;
       }
+
+      @media print {
+        .avoid-break {
+          break-inside: avoid;
+        }
+        .page {
+          page-break-before: always;
+          break-inside: avoid;
+        }
+      }
     </style>
     <title>LOC</title>
   </head>
@@ -123,7 +133,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="row mt-3">
+        <div class="row mt-3 avoid-break">
           <div class="col">
             <p>
               मन्जुरीनामा दिनेको नाम:
@@ -146,7 +156,7 @@
             </div>
           </div>
         </div>
-        <p>
+        <p class="avoid-break">
           माथि उल्लेखित मन्जुरीनामा दिने व्यक्ति यस कार्यालयमा स्वयं उपस्थित भई
           मन्जुरीनामा दिएको साँचो हो। झुठा ठहारेमा कानून बमोजिम सहुँला बुझाउला
           भनि प्रमाणित गरिन्छ। <br /><br />

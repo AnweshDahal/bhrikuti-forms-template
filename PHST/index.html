@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .phst {
+        max-width: 794px;
+        margin-inline: auto;
+        font-family: "Noto Sans Devnagari", sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        letter-spacing: 0px;
+        text-align: justify;
+        padding: 1rem;
+      }
+
+      p {
+        margin-bottom: 3px;
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 2px;
+        word-break: break-all;
+      }
+      .box {
+        display: inline-block;
+        width: 10rem;
+        height: 2rem;
+        border: 1px solid;
+      }
+
+      .empty {
+        display: inline-block;
+        min-width: 5rem;
+        height: 1.35rem;
+        border-bottom: 1px solid black;
+      }
+
+      @media print {
+        .avoid-break {
+          break-inside: avoid;
+        }
+        .page {
+          page-break-before: always;
+          break-inside: avoid;
+        }
+      }
+    </style>
+    <title>PHST Form</title>
+  </head>
+  <body>
+    <div class="phst">
+      <div class="page">
+        <p class="text-center">अनुसूची - २५ (घ)</p>
+        <p class="text-center">अनुसूची - २५ (घ)</p>
+        <p class="text-center">(विनियम ३० को उपविनियम ४(घ) सँग सम्बन्धित)</p>
+        <p class="text-center">(भौतिक धितोपत्रको हकमा)</p>
+        <p class="mt-3 text-end">मिती: <span class="empty"></span></p>
+        <p class="text-center">
+          <strong>विषय: मृत्यु पश्चात् धितोपत्र हस्तान्तरण बारे।</strong>
+        </p>
+        <p class="mt-2">
+          उपरोक्त विषयमा <span class="empty">{{body.district}}</span> ठेगाना
+          भएको श्री <span class="empty">{{body.deceasedName}}</span> को मिति
+          <span class="empty">{{body.dayofPassing}}</span> मा निधन भएकोले निजको
+          नाममा कायम रहेको
+          <span class="empty">{{body.companyName}}</span> कम्पनीको देहाय बमोजिम
+          धितोपत्र मा हकवाला मृतकको
+          <span class="empty">{{body.relation}}</span> नाता पर्ने श्री
+          <span class="empty">{{body.name}}</span> को नाममा रहेको हित्ग्राही
+          खाता नम्बर <span class="empty">{{body.relativeAccountNo}}</span> मा
+          हस्तान्तरण गरि पाउँ भनी आवश्यक कागजात समेत यसै निवेदन साथ संलग्न गरि
+          पेश गरेको छु। पछि फरक पर्ने छैन। यदि फरक परेमा कानून बमोजिम साहुला
+          बुझाउँला।
+        </p>
+        <table class="mt-3">
+          <tbody>
+            <tr>
+              <td rowspan="2" width="5%" class="text-center">
+                <strong>क्र.सं.</strong>
+              </td>
+              <td rowspan="2" width="30%" class="text-center">
+                <strong>धितोपत्र प्रमाणपत्र नम्बर</strong>
+              </td>
+              <td class="text-center" rowspan="2" width="15%">
+                <strong>कित्ता</strong>
+              </td>
+              <td colspan="2" class="text-center">
+                <strong>क्रम संख्या</strong>
+              </td>
+
+              <td class="text-center" rowspan="2">
+                <strong>कैफियत/ DRN</strong>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center" width="15%"><strong>देखि</strong></td>
+              <td class="text-center" width="15%"><strong>सम्म</strong></td>
+            </tr>
+            <!-- For Loop -->
+            <tr>
+              <td>{{security.index}}</td>
+              <td>{{security.securityNo}}</td>
+              <td>{{security.securityQuantity}}</td>
+              <td>{{security.from}}</td>
+              <td>{{security.to}}</td>
+              <td>{{security.drn}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row mt-3 avoid-break">
+          <div class="col"></div>
+          <div class="col">
+            <p class="text-center">
+              <u><strong>निवेदकको:</strong></u>
+            </p>
+            <p>दस्तखत:</p>
+            <p>नाम, थर: {{body.name}}</p>
+            <p>हित्ग्राही खाता नम्बर: {{body.accountNo}}</p>
+            <p>ठेगाना: {{body.address}}</p>
+            <p>फोन/ मोबाईल नं.: {{body.phoneNumber}}</p>
+          </div>
+        </div>
+        <p class="mt-3 avoid-break">
+          <u>
+            <strong> संलग्न गर्नु पर्ने आवश्यक २/२ प्रति कागजातहरु:- </strong>
+          </u>
+        </p>
+        <p class="avoid-break">
+          (१) मृत्यु दर्ताको प्रमाणपत्र प्रतिलिपि,<br />
+
+          (२) मृतकको मगरिकता प्रमाणित प्रतिलिपि,<br />
+
+          (३) हकवालाको नागरिकता प्रमाणपत्रको प्रमाणित प्रतिलिपि,<br />
+
+          (४) नाता प्रमाणित प्रमाणपत्रको प्रमाणित प्रतिलिपि तथा सम्पूर्ण
+          व्यक्तिहरुको नागरिकताको प्रतिलिपि,<br />
+
+          (५) अन्य हकवालाको मन्जुरीनामा,<br />
+        </p>
+        <hr class="avoid-break">
+        <p class="avoid-break">द्रष्टव्य: पेश गरेको प्रतिलिपिको सक्कल समेत लिई  निवेदक स्वयं उपस्थित हुनु पर्नेछ।</p>
+      </div>
+    </div>
+  </body>
+</html>
